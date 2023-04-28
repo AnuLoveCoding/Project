@@ -16,13 +16,13 @@ class login extends StatelessWidget {
       ),
 
       body: Container(
-         margin: EdgeInsets.all(20.0),
-          constraints: BoxConstraints.expand(width: double.infinity,height: 100.0),
-          decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage('../images/road.jpg'),)
-          ),
+        padding: EdgeInsets.all(20.0),
+        alignment: Alignment.center,
+        color: Colors.amber[200],
+
           child: Column(
             children: [
+              DisplayData('images/road.jpg', context),
               SizedBox(height: 10.0,),
               TextField(
                   controller: name,
@@ -61,6 +61,17 @@ class login extends StatelessWidget {
                }, child: Text('Click me please'))
             ],
           ),
+      ),
+    );
+  }
+  Widget DisplayData(String url, BuildContext context){
+    return Container(
+
+      margin: EdgeInsets.only(left: 10.0,),
+      constraints: BoxConstraints.expand(width: double.infinity,height: 100.0),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+          image: DecorationImage(image: AssetImage('images/road.jpg'),fit: BoxFit.cover)
       ),
     );
   }

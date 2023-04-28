@@ -19,6 +19,7 @@ class _splashscreeState extends State<splashscree> {
 
    Navigator.push(context,MaterialPageRoute(builder: (context){
      return login();
+
    })),
    );
 
@@ -35,7 +36,7 @@ class _splashscreeState extends State<splashscree> {
       margin: EdgeInsets.all(20.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        image: DecorationImage(image: NetworkImage('https://images.pexels.com/photos/1266302/pexels-photo-1266302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),fit: BoxFit.cover),
+        image: DecorationImage(image: AssetImage('images/road.jpg'),fit: BoxFit.cover),
         color: Colors.greenAccent,
       ),
     ),
